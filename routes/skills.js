@@ -11,5 +11,7 @@ var skillsCtrl = require('../controllers/skills');
 router.get('/', skillsCtrl.index);
 // GET /skills/:id --- SHOW!
 router.get('/:id', skillsCtrl.show);
+// POST /todos
+router.post('/', skillsCtrl.create);
 
 module.exports = router;

@@ -6,13 +6,21 @@ const devSkills = [
 
 module.exports = {
     getAll,
-    getOne
+    getOne,
+    create
 };
 
 function getAll() {
     return devSkills;
 }
 
-// function getOne() {
+function getOne(id) {
+    id = parseInt(id);
+    return devSkills.find(skill => skill.id === id);
+}
 
-// };
+function create(skills) {
+    devSkills.id = Date.now() % 1000000;
+    devSkills.level = false;
+    skills.push(skill);
+}
