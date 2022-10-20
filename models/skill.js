@@ -8,8 +8,19 @@ module.exports = {
     getAll,
     getOne,
     create,
-    deleteOne
+    deleteOne,
+    update
 };
+
+function update(id, updatedSkill) {
+    //Selecting the id in the array again
+    //returns int
+    id = parseInt(id);
+    // "" as const + = findIndex =>
+    const skill = devSkills.find(skill => skill.id === id);
+    skill.skill = updatedSkill;
+    Object.assign(skill, updatedSkill);
+}
 
 // Allows user to delete skill from the list
 function deleteOne(id) {
@@ -34,6 +45,6 @@ function getOne(id) {
 
 function create(skill) {
     skill.id = Date.now() % 1000000;
-    skill.level = false;
-    skills.push(skill);
+    skill.level = 'novice';
+    devSkills.push(skill);
 }
