@@ -7,8 +7,21 @@ const devSkills = [
 module.exports = {
     getAll,
     getOne,
-    create
+    create,
+    deleteOne
 };
+
+// Allows user to delete skill from the list
+function deleteOne(id) {
+    //selecting id in the array
+    //returns integer
+    id = parseInt(id);
+    // Create value idx ---> use .findIndex() method
+    // Pass => through ()
+    const idx = skills.findIndex(skill => skill.id === id);
+    //Remove with one .splice() method 
+    skills.splice(idx, 1);
+}
 
 function getAll() {
     return devSkills;

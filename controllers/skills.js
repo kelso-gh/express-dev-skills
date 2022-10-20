@@ -3,8 +3,16 @@ const Skill = require('../models/skill');
 module.exports = {
     index,
     show,
-    create
+    create,
+    delete: deleteSkill //cannot use delete alone
 };
+
+function deleteSkill(req, res) {
+    //obtain the property
+    Skill.deleteOne(req.params.id);
+    //redirect when there has been a change
+    res.redirect('/skills');
+}
 
 function create(req, res) {
     Skill.create(req.body);
