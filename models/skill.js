@@ -19,8 +19,8 @@ function getOne(id) {
     return devSkills.find(skill => skill.id === id);
 }
 
-function create(skills) {
-    devSkills.id = Date.now() % 1000000;
-    devSkills.level = false;
+function create(skill) {
+    skill.id = Date.now() % 1000000;
+    skill.level = false;
     skills.push(skill);
 }
