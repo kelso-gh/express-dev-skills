@@ -14,9 +14,16 @@
     <ul>
       <% skills.forEach(function(s) { %>
         <li>
+          <form 
+          action="/skills/<%= s.id %>?_method=DELETE"
+          method="POST"
+          class="delete-form"
+          >
+            <button type="submit">✖︎</button>
+          </form>
           <a href="/skills/<%= s.id %>"><%= s.skill %></a>
             - 
-          <%= s.level ? 'beginner' : 'novice' %>
+          <%= s.level ? 'novice' : 'pro' %>
         </li>
       <% }); %>
     </ul>

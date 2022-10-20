@@ -13,5 +13,7 @@ router.get('/', skillsCtrl.index);
 router.get('/:id', skillsCtrl.show);
 // POST /todos
 router.post('/', skillsCtrl.create);
+// DELETE /todos/:id
+router.post('/:id', skillsCtrl.delete);
 
 module.exports = router;
