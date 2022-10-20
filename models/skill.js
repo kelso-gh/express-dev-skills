@@ -29,9 +29,9 @@ function deleteOne(id) {
     id = parseInt(id);
     // Create value idx ---> use .findIndex() method
     // Pass => through ()
-    const idx = skills.findIndex(skill => skill.id === id);
+    const idx = devSkills.findIndex(skill => skill.id === id);
     //Remove with one .splice() method 
-    skills.splice(idx, 1);
+    devSkills.splice(idx, 1);
 }
 
 function getAll() {
