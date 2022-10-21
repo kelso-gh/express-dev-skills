@@ -24,18 +24,9 @@ h3 {
   color: grey;
 }
 
-.submit-form {
-  display: flex;
-  justify-content: center;
-}
 
 .submit-button {
   background-color: grey;
-}
-
-.edit {
-  display: flex;
-  justify-content: center;
 }
 
 .edit-top {
@@ -50,9 +41,5 @@ h3 {
   background-color: grey;
 }
 
-.index {
-  display: flex;
-  justify-content: center;
-}
 
 
