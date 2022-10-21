@@ -1,12 +1,16 @@
 <%- include('../partials/header') %>
-
+<div class="edit-top"></div>
+<div class="edit-box">
+<div class="edit">
 <form action="/skills/<%= skill.id %>?_method=PUT" method="POST">
     <input type="text" name="skill" value="<%= skill.skill %>">
     <label>
         <input type="checkbox" name="level" <%= skill.level ? 'checked' : '' %>>
             Mastered
     </label><br>
-    <button type="submit">Update Skills</button>
+    <div class="edit-bottom"></div>
+    <button class="edit-button" type="submit">Update Skills</button>
     </form>
-    
+    </div>
+    </div>
  <%- include('../partials/footer') %>   
